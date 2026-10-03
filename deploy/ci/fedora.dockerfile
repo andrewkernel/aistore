@@ -1,6 +1,7 @@
 FROM quay.io/podman/stable:latest
 
-ARG GO_VERSION=1.26
+# TODO: do NOT use  GO_VERSION with a full tarball (linux-amd64.tar.gz) version
+ARG GO_VERSION=1.27.1
 
 RUN dnf -y --setopt=install_weak_deps=False install \
   attr \
